@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/charitytxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text="Charity Sign up! get fit while showing support to the less fortunate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/CharitySignUp1"
+        android:layout_width="153dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/charitytxt"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ImageView
+        android:id="@+id/CharitySignUp3"
+        android:layout_width="153dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp1"
+        app:layout_constraintStart_toStartOf="@+id/CharitySignUp1"
+        app:layout_constraintTop_toBottomOf="@+id/CharitySignUp1"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ImageView
+        android:id="@+id/CharitySignUp5"
+        android:layout_width="153dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp3"
+        app:layout_constraintStart_toStartOf="@+id/CharitySignUp3"
+        app:layout_constraintTop_toBottomOf="@+id/CharitySignUp3"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ImageView
+        android:id="@+id/CharitySignUp6"
+        android:layout_width="153dp"
+        android:layout_height="122dp"
+        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp4"
+        app:layout_constraintStart_toStartOf="@+id/CharitySignUp4"
+        app:layout_constraintTop_toTopOf="@+id/CharitySignUp5"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ImageView
+        android:id="@+id/CharitySignUp2"
+        android:layout_width="153dp"
+        android:layout_height="122dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CharitySignUp1"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ImageView
+        android:id="@+id/CharitySignUp4"
+        android:layout_width="153dp"
+        android:layout_height="122dp"
+        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp2"
+        app:layout_constraintStart_toStartOf="@+id/CharitySignUp2"
+        app:layout_constraintTop_toTopOf="@+id/CharitySignUp3"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

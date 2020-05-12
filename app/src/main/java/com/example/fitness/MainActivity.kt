@@ -3,7 +3,6 @@ package com.example.fitness
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -35,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun validate(userName: String, userPassword: String){
         if((userName == "Admin") && (userPassword == "1234")){
-            val intent = Intent(this, MainPage::class.java)
+            val intent = Intent(this, NavDrawer::class.java)
                     startActivity(intent)
         }else{
             counter--

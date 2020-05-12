@@ -5,7 +5,7 @@
     android:id="@+id/ContraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainPage">
+    tools:context=".NavDrawer">
 
     <Button
         android:id="@+id/Logoutbtn"
@@ -21,17 +21,4 @@
         app:layout_constraintVertical_bias="0.023"
         tools:text="Logout" />
 
-    <Button
-        android:id="@+id/popupbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="showPopup"
-        android:text="Show popup"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.079" />
 </androidx.constraintlayout.widget.ConstraintLayout>
