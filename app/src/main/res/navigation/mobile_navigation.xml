@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_main_page"/>
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_shop"
         android:name="com.example.fitness.ui.StoreFragment"
         android:label="@string/menu_shop"
         tools:layout="@layout/fragment_store" />
@@ -22,4 +22,9 @@
         android:name="com.example.fitness.ui.CharityFragment"
         android:label="@string/menu_charity"
         tools:layout="@layout/fragment_charity" />
+
+    <fragment
+        android:id="@+id/nav_workout"
+        android:name="com.example.fitness.ui.CreateWorkoutFragment"
+        android:label="@string/menu_workout" />
 </navigation>

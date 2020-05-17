@@ -3,9 +3,11 @@ package com.example.fitness
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,8 +16,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var Info: TextView
     private lateinit var Login: Button
     private var counter: Int = 5
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,25 +27,25 @@ class MainActivity : AppCompatActivity() {
         Login = findViewById(R.id.btnLogin)
 
         Login.setOnClickListener{
-
-                validate(Name.getText().toString(), Password.getText().toString())
+            validate(Name.text.toString(), Password.text.toString())
         }
 
     }
-    private fun validate(userName: String, userPassword: String){
+
+     private fun validate(userName: String, userPassword: String){
+
         if((userName == "Admin") && (userPassword == "1234")){
             val intent = Intent(this, NavDrawer::class.java)
-                    startActivity(intent)
+            intent.putExtra("username", "admin")
+            intent.putExtra("currency", 300)
+            startActivity(intent)
         }else{
             counter--
-            Info.setText("No of attempts Remaining: " + (counter).toString())
+            Info.text = "No of attempts Remaining: " + (counter).toString()
             if(counter == 0){
-                Login.setEnabled(false)
+                Login.isEnabled = false
             }
         }
     }
-
-
-
 }
 

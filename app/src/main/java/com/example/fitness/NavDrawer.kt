@@ -1,7 +1,9 @@
 package com.example.fitness
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
+import android.widget.Toast
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -11,12 +13,15 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import kotlin.properties.Delegates
 
 class NavDrawer : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
+    var currentUserCurrency by Delegates.notNull<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        currentUserCurrency = intent.extras!!.getInt("currency")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nav_draw)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
@@ -29,11 +34,21 @@ class NavDrawer : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_Charity
+                R.id.nav_home, R.id.nav_shop, R.id.nav_Charity
             ), drawerLayout
         )
+
+        navView.menu.findItem(R.id.nav_Workout).setOnMenuItemClickListener {
+            navView.setCheckedItem(R.id.nav_Workout)
+            navController.navigate(R.id.nav_workout)
+            drawerLayout.closeDrawers()
+            true
+        }
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        Log.i("test", navController.navigatorProvider.toString())
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
