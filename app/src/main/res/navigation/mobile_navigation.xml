@@ -26,5 +26,11 @@
     <fragment
         android:id="@+id/nav_workout"
         android:name="com.example.fitness.ui.CreateWorkoutFragment"
-        android:label="@string/menu_workout" />
+        android:label="@string/menu_workout"
+        tools:layout="@layout/fragment_workout"/>
+    <fragment
+        android:id="@+id/nav_view_workout"
+        android:name="com.example.fitness.ui.ViewWorkoutFragment"
+        android:label="Workouts"
+        tools:layout="@layout/fragment_view_workout"/>
 </navigation>
