@@ -27,6 +27,7 @@ class StoreFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         currencyCounter.text = "coins: ${(activity as? NavDrawer)!!.currentUserCurrency}"
+        nameView.text = "logged in as: ${(activity as? NavDrawer)!!.currentUserName}"
 
         val buttonList = mutableListOf<ImageButton>()
         for (child in sequenceOf(leftLayout.children, rightLayout.children).flatten()) {
