@@ -14,6 +14,7 @@ class ViewWorkoutFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+
         return inflater.inflate(R.layout.fragment_view_workout, container, false)
     }
 
