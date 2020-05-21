@@ -20,12 +20,13 @@ object DatabaseMethods {
         }
     }
 
-    fun register(userName: String, password: String) {
-        TODO()
+    fun register(userId: String, password: String) {
+
     }
 
-    fun updateCoins(newCoins: Int) {
-        TODO()
+    fun updateCoins(newCoins: Int, userId:Int) {
+        Jsoup.connect("https://demo.agwork.co.uk/db/coinupdate.php?newcoins=$newCoins&id=$userId").get()
+        Log.i("url", "https://demo.agwork.co.uk/db/coinupdate.php?newcoins=$newCoins&id=$userId")
     }
 
     fun extractJson(url: String):JSONArray {

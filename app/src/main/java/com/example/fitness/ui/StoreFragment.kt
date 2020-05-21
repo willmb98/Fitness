@@ -11,9 +11,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
+import com.example.fitness.DatabaseMethods
 import com.example.fitness.NavDrawer
 import com.example.fitness.R
 import kotlinx.android.synthetic.main.fragment_store.*
+import kotlinx.coroutines.newSingleThreadContext
+import kotlinx.coroutines.runBlocking
 
 class StoreFragment : Fragment() {
 
@@ -54,6 +57,9 @@ class StoreFragment : Fragment() {
                         }
 
                         (activity as NavDrawer).currentUserCurrency -= itemValue
+                        runBlocking (newSingleThreadContext("NetworkThread")) {
+                            DatabaseMethods.updateCoins((activity as NavDrawer).currentUserCurrency, (activity as NavDrawer).currentUserDbId)
+                        }
                         currencyCounter.text = "coins: ${(activity as? NavDrawer)!!.currentUserCurrency}"
                     }
 
