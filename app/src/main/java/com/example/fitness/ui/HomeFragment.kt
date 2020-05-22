@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.fitness.*
+import kotlinx.android.synthetic.main.fragment_main_page.*
 
 class HomeFragment : Fragment() {
 
@@ -18,6 +19,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        currencyCounter4.text = "You currently have ${(activity as? NavDrawer)!!.currentUserCurrency} coins"
+        nameView4.text = "Logged in as ${(activity as? NavDrawer)!!.currentUserName}"
 
         val logout = view.findViewById<Button>(R.id.Logoutbtn)
 

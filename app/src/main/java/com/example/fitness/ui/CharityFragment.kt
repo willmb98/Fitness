@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.example.fitness.MainActivity
+import com.example.fitness.NavDrawer
 import com.example.fitness.R
+import kotlinx.android.synthetic.main.fragment_charity.*
 
 class CharityFragment : Fragment() {
     private lateinit var Charity1 : ImageView
@@ -23,8 +25,13 @@ class CharityFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_charity, container, false)
     }
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        currencyCounter2.text = "You currently have ${(activity as? NavDrawer)!!.currentUserCurrency} coins"
+        nameView2.text = "Logged in as ${(activity as? NavDrawer)!!.currentUserName}"
 
         Charity1 = view.findViewById(R.id.CharitySignUp1)
         Charity2 = view.findViewById(R.id.CharitySignUp2)

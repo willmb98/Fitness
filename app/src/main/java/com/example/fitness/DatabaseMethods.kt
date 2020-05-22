@@ -17,7 +17,6 @@ object DatabaseMethods {
 
     fun register(username: String, password: String, email: String, firstName: String, lastName: String) {
         Jsoup.connect("https://demo.agwork.co.uk/db/register.php?username=$username&password=$password&email=$email&firstname=$firstName&secondname=$lastName").get()
-
     }
 
     fun updateCoins(newCoins: Int, userId:Int) {

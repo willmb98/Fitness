@@ -6,18 +6,27 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/charitytxt"
+        android:id="@+id/currencyCounter2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center_horizontal"
-        android:text="Charity Sign up! get fit while showing support to the less fortunate"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Coins: 0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="268dp"
+        android:layout_marginRight="268dp"
+        android:text="Logged in as: NAME"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,59 +34,152 @@
         android:id="@+id/CharitySignUp1"
         android:layout_width="153dp"
         android:layout_height="122dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="136dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/charitytxt"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <ImageView
         android:id="@+id/CharitySignUp3"
         android:layout_width="153dp"
         android:layout_height="122dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="@+id/CharitySignUp1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/CharitySignUp1"
         app:layout_constraintTop_toBottomOf="@+id/CharitySignUp1"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
-    <ImageView
-        android:id="@+id/CharitySignUp5"
-        android:layout_width="153dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp3"
-        app:layout_constraintStart_toStartOf="@+id/CharitySignUp3"
-        app:layout_constraintTop_toBottomOf="@+id/CharitySignUp3"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
+    <TextView
+        android:id="@+id/charitytxt6"
+        android:layout_width="154dp"
+        android:layout_height="30dp"
+        android:gravity="center_horizontal"
+        android:text="Sign up to this partner subscription for 300 coins"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CharitySignUp2"
+        app:layout_constraintTop_toBottomOf="@+id/CharitySignUp6" />
 
-    <ImageView
-        android:id="@+id/CharitySignUp6"
-        android:layout_width="153dp"
-        android:layout_height="122dp"
-        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp4"
-        app:layout_constraintStart_toStartOf="@+id/CharitySignUp4"
-        app:layout_constraintTop_toTopOf="@+id/CharitySignUp5"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
-
-    <ImageView
-        android:id="@+id/CharitySignUp2"
-        android:layout_width="153dp"
-        android:layout_height="122dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/CharitySignUp1"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
+    <TextView
+        android:id="@+id/charitytxt3"
+        android:layout_width="154dp"
+        android:layout_height="30dp"
+        android:gravity="center_horizontal"
+        android:text="Sign up at partner site for 50 coins"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CharitySignUp2"
+        app:layout_constraintTop_toBottomOf="@+id/CharitySignUp2" />
 
     <ImageView
         android:id="@+id/CharitySignUp4"
         android:layout_width="153dp"
         android:layout_height="122dp"
         app:layout_constraintEnd_toEndOf="@+id/CharitySignUp2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/CharitySignUp2"
-        app:layout_constraintTop_toTopOf="@+id/CharitySignUp3"
+        app:layout_constraintTop_toBottomOf="@+id/charitytxt3"
         app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <TextView
+        android:id="@+id/charitytxt2"
+        android:layout_width="154dp"
+        android:layout_height="30dp"
+        android:gravity="center_horizontal"
+        android:text="Watch an advert for 5 coins"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CharitySignUp1"
+        app:layout_constraintTop_toBottomOf="@+id/CharitySignUp1" />
+
+    <TextView
+        android:id="@+id/charitytxt5"
+        android:layout_width="154dp"
+        android:layout_height="30dp"
+        android:gravity="center_horizontal"
+        android:text="Make a purchase through partner site for 50 coins"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CharitySignUp1"
+        app:layout_constraintTop_toBottomOf="@+id/CharitySignUp3" />
+
+    <ImageView
+        android:id="@+id/CharitySignUp2"
+        android:layout_width="153dp"
+        android:layout_height="122dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CharitySignUp1"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ImageView
+        android:id="@+id/CharitySignUp5"
+        android:layout_width="153dp"
+        android:layout_height="122dp"
+        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/CharitySignUp3"
+        app:layout_constraintTop_toBottomOf="@+id/charitytxt5"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <TextView
+        android:id="@+id/charitytxt7"
+        android:layout_width="154dp"
+        android:layout_height="30dp"
+        android:gravity="center_horizontal"
+        android:text="Sign up to partner subscription for 150 coins"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CharitySignUp1"
+        app:layout_constraintTop_toBottomOf="@+id/CharitySignUp5" />
+
+    <TextView
+        android:id="@+id/charitytxt4"
+        android:layout_width="154dp"
+        android:layout_height="30dp"
+        android:gravity="center_horizontal"
+        android:text="Make a purchase through different site for 100 coins"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CharitySignUp2"
+        app:layout_constraintTop_toBottomOf="@+id/CharitySignUp4" />
+
+    <ImageView
+        android:id="@+id/CharitySignUp6"
+        android:layout_width="153dp"
+        android:layout_height="122dp"
+        app:layout_constraintEnd_toEndOf="@+id/CharitySignUp4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CharitySignUp4"
+        app:layout_constraintTop_toBottomOf="@+id/charitytxt4"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <TextView
+        android:id="@+id/charitytxt"
+        android:layout_width="411dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text="Special offers to gain coins"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
