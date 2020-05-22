@@ -74,6 +74,7 @@ class MainActivity : AppCompatActivity() {
                 btnLogin.isEnabled = false
             }
             TODO("60 second timer until they can try logging in again?")
+            TODO("Some kind of image / background / colourscheme so we don't look basic")
         }
     }
 }
