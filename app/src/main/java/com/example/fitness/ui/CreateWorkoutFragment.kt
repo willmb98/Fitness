@@ -58,6 +58,8 @@ class CreateWorkoutFragment : Fragment() {
         WorkoutName = v.findViewById(R.id.edtwrkouttxt)
         return v
 
+        TODO("Connect CreateWorkout to database, uploading the workout")
+        TODO("Add Option (Potentially new page) to add daily steps")
 
 
         //todo this

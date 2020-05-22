@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import com.example.fitness.DatabaseMethods
 import com.example.fitness.MainActivity
 import com.example.fitness.NavDrawer
 import com.example.fitness.R
@@ -23,9 +25,8 @@ class CharityFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_charity, container, false)
+        TODO("Rename Charity Section to Special Offers")
     }
-
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?){
         super.onViewCreated(view, savedInstanceState)
@@ -41,22 +42,22 @@ class CharityFragment : Fragment() {
         Charity6 = view.findViewById(R.id.CharitySignUp6)
 
         Charity1.setOnClickListener {
-            TODO("implement onclick")
+            TODO("Connect to database, add 5 coins")
         }
         Charity2.setOnClickListener {
-            TODO("implement onclick")
+            TODO("Connect to database, add 50 coins")
         }
         Charity3.setOnClickListener {
-            TODO("implement onclick")
+            TODO("Connect to database, add 50 coins")
         }
         Charity4.setOnClickListener {
-            TODO("implement onclick")
+            TODO("Connect to database, add 100 coins")
         }
         Charity5.setOnClickListener {
-            TODO("implement onclick")
+            TODO("Connect to database, add 150 coins")
         }
         Charity6.setOnClickListener {
-            TODO("implement onclick")
+            TODO("Connect to database, add 300 coins")
         }
     }
 }

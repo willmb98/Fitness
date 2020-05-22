@@ -16,6 +16,8 @@ class ViewWorkoutFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
 
         return inflater.inflate(R.layout.fragment_view_workout, container, false)
+        TODO("Connect ViewWorkout to Database - Download list of activities from Database")
     }
 
 }
+
