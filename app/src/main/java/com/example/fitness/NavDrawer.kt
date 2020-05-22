@@ -19,9 +19,13 @@ class NavDrawer : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     var currentUserCurrency by Delegates.notNull<Int>()
+    var currentUserName by Delegates.notNull<String>()
+    var currentUserDbId by Delegates.notNull<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         currentUserCurrency = intent.extras!!.getInt("currency")
+        currentUserName = intent.extras!!.getString("username")!!
+        currentUserDbId = intent.extras!!.getInt("dbID")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nav_draw)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
