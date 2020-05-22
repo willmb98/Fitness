@@ -27,7 +27,7 @@ class CharityFragment : Fragment() {
 
 
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
         super.onViewCreated(view, savedInstanceState)
 
         currencyCounter2.text = "You currently have ${(activity as? NavDrawer)!!.currentUserCurrency} coins"
