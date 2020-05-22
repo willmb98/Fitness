@@ -68,7 +68,7 @@ class CreateWorkoutFragment : Fragment() {
     }
 
 
-    private fun save(v: View?) {
+    fun save(v: View?) {
         val text: String = "\n "+ mEditText.text.toString() + "\n" + sets.text.toString() + "\n" + reps.text.toString()
         var fos: FileOutputStream? = null
         try {
