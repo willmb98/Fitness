@@ -1,8 +1,12 @@
 package com.example.fitness
 
+import android.content.Context
 import android.os.Bundle
+import android.util.AttributeSet
 import android.util.Log
 import android.view.Menu
+import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController

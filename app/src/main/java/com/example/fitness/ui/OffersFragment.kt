@@ -13,8 +13,10 @@ import com.example.fitness.MainActivity
 import com.example.fitness.NavDrawer
 import com.example.fitness.R
 import kotlinx.android.synthetic.main.fragment_charity.*
+import kotlinx.coroutines.newSingleThreadContext
+import kotlinx.coroutines.runBlocking
 
-class CharityFragment : Fragment() {
+class OffersFragment : Fragment() {
     private lateinit var Charity1 : ImageView
     private lateinit var Charity2 : ImageView
     private lateinit var Charity3 : ImageView
@@ -25,7 +27,7 @@ class CharityFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_charity, container, false)
-        TODO("Rename Charity Section to Special Offers")
+        //TODO("Rename Charity Section to Special Offers")
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?){
@@ -34,30 +36,36 @@ class CharityFragment : Fragment() {
         currencyCounter2.text = "You currently have ${(activity as? NavDrawer)!!.currentUserCurrency} coins"
         nameView2.text = "Logged in as ${(activity as? NavDrawer)!!.currentUserName}"
 
-        Charity1 = view.findViewById(R.id.CharitySignUp1)
-        Charity2 = view.findViewById(R.id.CharitySignUp2)
-        Charity3 = view.findViewById(R.id.CharitySignUp3)
-        Charity4 = view.findViewById(R.id.CharitySignUp4)
-        Charity5 = view.findViewById(R.id.CharitySignUp5)
-        Charity6 = view.findViewById(R.id.CharitySignUp6)
+        CharitySignUp1.setOnClickListener {
+            (activity as NavDrawer).currentUserCurrency += 5
+            updateCoins()
+        }
+        CharitySignUp2.setOnClickListener {
+            (activity as NavDrawer).currentUserCurrency += 50
+            updateCoins()
+        }
+        CharitySignUp3.setOnClickListener {
+            (activity as NavDrawer).currentUserCurrency += 50
+            updateCoins()
+        }
+        CharitySignUp4.setOnClickListener {
+            (activity as NavDrawer).currentUserCurrency += 100
+            updateCoins()
+        }
+        CharitySignUp5.setOnClickListener {
+            (activity as NavDrawer).currentUserCurrency += 150
+            updateCoins()
+        }
+        CharitySignUp6.setOnClickListener {
+            (activity as NavDrawer).currentUserCurrency += 300
+            updateCoins()
+        }
+    }
 
-        Charity1.setOnClickListener {
-            TODO("Connect to database, add 5 coins")
+    fun updateCoins() {
+        runBlocking (newSingleThreadContext("NetworkThread")) {
+            DatabaseMethods.updateCoins((activity as NavDrawer).currentUserCurrency, (activity as NavDrawer).currentUserDbId)
         }
-        Charity2.setOnClickListener {
-            TODO("Connect to database, add 50 coins")
-        }
-        Charity3.setOnClickListener {
-            TODO("Connect to database, add 50 coins")
-        }
-        Charity4.setOnClickListener {
-            TODO("Connect to database, add 100 coins")
-        }
-        Charity5.setOnClickListener {
-            TODO("Connect to database, add 150 coins")
-        }
-        Charity6.setOnClickListener {
-            TODO("Connect to database, add 300 coins")
-        }
+        currencyCounter2.text = "coins: ${(activity as NavDrawer).currentUserCurrency}"
     }
 }

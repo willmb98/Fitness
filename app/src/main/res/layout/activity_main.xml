@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8DC0E8"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -75,6 +77,14 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:text="Register" />
+
+            <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,19 +93,26 @@
                 android:layout_weight="1"
                 android:text="Login" />
 
-            <Button
-                android:id="@+id/btnRegister"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="16dp"
-                android:layout_weight="1"
-                android:text="Register" />
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tvInfo"
+            android:id="@+id/tvTrys"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Attempts remaining: 5" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ProFitness"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

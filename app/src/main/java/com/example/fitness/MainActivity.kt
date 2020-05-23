@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             etLastName.visibility = View.VISIBLE
             etPassword.inputType = InputType.TYPE_TEXT_VARIATION_PERSON_NAME
             btnLogin.visibility = View.GONE
+            tvTrys.visibility = View.GONE
 
             btnRegister.setOnClickListener {
                 runBlocking (newSingleThreadContext("NetworkThread")) {
@@ -64,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         } else {
 
             counter--
-            tvInfo.text = "Attempts remaining: $counter"
+            tvTrys.text = "Attempts remaining: $counter"
             if (counter == 0) {
                 Toast.makeText(
                     applicationContext,
@@ -73,8 +74,8 @@ class MainActivity : AppCompatActivity() {
                 ).show()
                 btnLogin.isEnabled = false
             }
-            TODO("60 second timer until they can try logging in again?")
-            TODO("Some kind of image / background / colourscheme so we don't look basic")
+            //TODO("60 second timer until they can try logging in again?")
+            //TODO("Some kind of image / background / colourscheme so we don't look basic")
         }
     }
 }

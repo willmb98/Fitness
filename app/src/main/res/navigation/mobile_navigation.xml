@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_Charity"
-        android:name="com.example.fitness.ui.CharityFragment"
+        android:name="com.example.fitness.ui.OffersFragment"
         android:label="@string/menu_charity"
         tools:layout="@layout/fragment_charity" />
 

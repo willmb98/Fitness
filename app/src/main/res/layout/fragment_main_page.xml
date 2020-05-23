@@ -8,140 +8,24 @@
     tools:context=".NavDrawer">
 
     <TextView
-        android:id="@+id/nameView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="224dp"
-        android:layout_marginLeft="224dp"
-        android:layout_marginTop="164dp"
-        android:text="Today's Stats"
-        android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nameView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="224dp"
-        android:layout_marginLeft="224dp"
-        android:layout_marginTop="196dp"
-        android:text="7543 Steps"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nameView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="224dp"
-        android:layout_marginLeft="224dp"
-        android:layout_marginTop="268dp"
-        android:text="6 mile run"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nameView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="224dp"
-        android:layout_marginLeft="224dp"
-        android:layout_marginTop="220dp"
-        android:text="1.8 mile walk"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nameView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="224dp"
-        android:layout_marginLeft="224dp"
-        android:layout_marginTop="244dp"
-        android:text="25 Situps"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nameView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="268dp"
-        android:text="5 mile run"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nameView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="244dp"
-        android:text="50 Situps"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nameView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="220dp"
-        android:text="2.1 mile walk"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nameView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="196dp"
-        android:text="14343 Steps"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/nameView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="164dp"
-        android:text="Yesterday's Stats"
-        android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/nameView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="268dp"
-        android:layout_marginRight="268dp"
         android:text="Logged in as: NAME"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/nameView4"
+        android:id="@+id/tvTitle"
         android:layout_width="372dp"
         android:layout_height="43dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="120dp"
         android:layout_marginTop="88dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
-        android:textStyle="bold|italic"
         android:text="Welcome to FitnessTracker"
         android:textSize="30dp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
@@ -160,16 +44,106 @@
 
     <Button
         android:id="@+id/Logoutbtn"
-        android:layout_width="130dp"
-        android:layout_height="63dp"
+        android:layout_width="107dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Logout"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.872"
         tools:text="Logout" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Yesterday's Stats"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/nameView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14343 Steps" />
+
+            <TextView
+                android:id="@+id/nameView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.1 mile walk" />
+
+            <TextView
+                android:id="@+id/nameView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50 Situps" />
+
+            <TextView
+                android:id="@+id/nameView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 mile run" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's Stats"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/nameView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7543 Steps" />
+
+            <TextView
+                android:id="@+id/nameView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.8 mile walk" />
+
+            <TextView
+                android:id="@+id/nameView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 Situps" />
+
+            <TextView
+                android:id="@+id/nameView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 mile run" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

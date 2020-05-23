@@ -14,8 +14,8 @@
             android:title="@string/menu_shop" />
         <item
             android:id="@+id/nav_Charity"
-            android:icon="@drawable/ic_charity"
-            android:title="@string/menu_charity" />
+            android:icon="@drawable/ic_coupon"
+            android:title="Offers" />
         <item
             android:id="@+id/nav_Workout"
             android:icon="@drawable/ic_weights"

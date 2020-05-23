@@ -5,6 +5,8 @@ import org.json.JSONArray
 import org.json.JSONObject
 import org.jsoup.Jsoup
 
+//a collection of methods that connect toi a very basic php interface for the MySql database
+
 object DatabaseMethods {
     fun checkLogin(username: String, password: String):JSONObject?{
         val json = extractJson("https://demo.agwork.co.uk/db/login.php?username=$username&password=$password")
