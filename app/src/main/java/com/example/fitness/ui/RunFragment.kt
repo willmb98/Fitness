@@ -60,7 +60,7 @@ class RunFragment : Fragment() {
                 running = false
             }
         }
-        resetBtn.setOnClickListener {
+        stopBtn.setOnClickListener {
             chronometer.setBase(SystemClock.elapsedRealtime())
             chronometer.stop()
 
