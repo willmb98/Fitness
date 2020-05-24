@@ -12,7 +12,7 @@
         android:id="@+id/tvDistance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="4dp"
         android:gravity="center"
         android:text="Km run: 0"
         android:textColor="#000000"
@@ -22,6 +22,7 @@
         android:id="@+id/tvSteps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="Steps: 0"
         android:textColor="#000000"
         android:textSize="36sp" />
@@ -30,6 +31,7 @@
         android:id="@+id/chronometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:textSize="36sp" />
 
     <Button
