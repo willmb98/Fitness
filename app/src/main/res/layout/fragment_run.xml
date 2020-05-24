@@ -18,11 +18,19 @@
         android:textColor="#000000"
         android:textSize="36sp" />
 
+    <TextView
+        android:id="@+id/tvSteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Steps: 0"
+        android:textColor="#000000"
+        android:textSize="36sp" />
+
     <Chronometer
         android:id="@+id/chronometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp" />
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/startBtn"
@@ -44,4 +52,5 @@
         android:layout_height="wrap_content"
         android:onClick="resetChronometer"
         android:text="end Run" />
+
 </LinearLayout>
