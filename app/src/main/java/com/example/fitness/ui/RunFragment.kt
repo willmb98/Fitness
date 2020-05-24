@@ -63,7 +63,7 @@ class RunFragment : Fragment() {
             tvSteps.text = "Steps: ${steps}"
             tvDistance.text = "Km run: ${distance.round(2)}"
 
-            TODO("Send steps/distance/duration/todays date and time to database")
+            //TODO("Send steps/distance/duration/todays date and time to database")
         }
     }
 

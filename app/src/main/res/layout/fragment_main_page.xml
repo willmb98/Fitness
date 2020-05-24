@@ -23,7 +23,7 @@
         android:layout_width="372dp"
         android:layout_height="43dp"
         android:layout_marginTop="88dp"
-        android:text="Welcome to ProTracker"
+        android:text="Welcome to FitnessTracker"
         android:textSize="30dp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,47 +72,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/nameView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Today's Stats"
-                android:textStyle="bold|italic" />
-
-            <TextView
-                android:id="@+id/nameView17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="7543 Steps" />
-
-            <TextView
-                android:id="@+id/nameView20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1.8 mile walk" />
-
-            <TextView
-                android:id="@+id/nameView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="25 Situps" />
-
-            <TextView
-                android:id="@+id/nameView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="6 mile run" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <TextView
@@ -146,6 +105,44 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5 mile run" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's Stats"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/nameView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7543 Steps" />
+
+            <TextView
+                android:id="@+id/nameView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.8 mile walk" />
+
+            <TextView
+                android:id="@+id/nameView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 Situps" />
+
+            <TextView
+                android:id="@+id/nameView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 mile run" />
         </LinearLayout>
     </LinearLayout>
 
