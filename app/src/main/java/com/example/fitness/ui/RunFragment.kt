@@ -11,6 +11,8 @@ import com.example.fitness.DatabaseMethods
 import com.example.fitness.NavDrawer
 import com.example.fitness.R
 import kotlinx.android.synthetic.main.fragment_run.*
+import kotlinx.coroutines.newSingleThreadContext
+import kotlinx.coroutines.runBlocking
 import kotlin.math.round
 
 
@@ -64,7 +66,9 @@ class RunFragment : Fragment() {
 
             val coinsToAdd = steps*10
             (activity as NavDrawer).currentUserCurrency = (activity as NavDrawer).currentUserCurrency + coinsToAdd
-            DatabaseMethods.updateCoins((activity as NavDrawer).currentUserCurrency, (activity as NavDrawer).currentUserDbId)
+            runBlocking (newSingleThreadContext("NetworkThread")) {
+                DatabaseMethods.updateCoins((activity as NavDrawer).currentUserCurrency, (activity as NavDrawer).currentUserDbId)
+            }
             Toast.makeText(activity, "you earnt $coinsToAdd coins for that run!", Toast.LENGTH_LONG).show()
             (activity as NavDrawer).navController.navigate(R.id.nav_home)
 
