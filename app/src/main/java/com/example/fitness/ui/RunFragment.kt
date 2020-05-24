@@ -18,7 +18,6 @@ class RunFragment : Fragment() {
     private var distance:Double = 0.00
     private var secIntervals = 1
     private var steps:Int = 0
-    private var duration: Long = 0
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -32,7 +31,7 @@ class RunFragment : Fragment() {
         chronometer.setFormat("Time: %s")
         chronometer.setBase(SystemClock.elapsedRealtime())
         chronometer.setOnChronometerTickListener { chronometer ->
-            //every 10 seconds add more to the simulated run
+            //every 1 second add more to the simulated run
             if (SystemClock.elapsedRealtime() - chronometer.base >= (1000 * secIntervals)) {
                 secIntervals++
                 distance += 0.002
@@ -58,12 +57,12 @@ class RunFragment : Fragment() {
         }
         resetBtn.setOnClickListener {
             chronometer.setBase(SystemClock.elapsedRealtime());
+            chronometer.stop();
+            running = false;
             steps = 0;
             distance = 0.0;
             tvSteps.text = "Steps: ${steps}"
             tvDistance.text = "Km run: ${distance.round(2)}"
-
-            TODO("Send steps/distance/duration/todays date and time to database")
         }
     }
 
