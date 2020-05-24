@@ -89,7 +89,7 @@
             android:layout_marginEnd="96dp"
             android:layout_marginRight="96dp"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edittxt" />
 
@@ -101,7 +101,7 @@
             android:layout_marginEnd="96dp"
             android:layout_marginRight="96dp"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edittextsets" />
 

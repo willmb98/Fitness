@@ -42,13 +42,13 @@ class CreateWorkoutFragment : Fragment() {
         Loadbtn = v.findViewById(R.id.loadbtn)
         SaveName = v.findViewById(R.id.savebtn2)
         Savebtn.setOnClickListener {
-        save(view)
+        save()
         }
         Loadbtn.setOnClickListener {
-            load(view)
+            load()
         }
         SaveName.setOnClickListener {
-            SaveWorkout(view)
+            SaveWorkout()
         }
 
         mEditText = v.findViewById(R.id.edittxt)
@@ -62,13 +62,13 @@ class CreateWorkoutFragment : Fragment() {
         //TODO("Add Option (Potentially new page) to add daily steps")
 
     }
+
     private fun resetFile(v: View?){
         var file: File
     }
 
-
-    private fun save(v: View?) {
-        val text: String = "\n "+ mEditText.text.toString() + "\n" + sets.text.toString() + "\n" + reps.text.toString()
+    private fun save() {
+        val text: String = mEditText.text.toString() + "\n" + sets.text.toString() + "\n" + reps.text.toString()
         var fos: FileOutputStream? = null
         try {
         fos = context?.openFileOutput(FILE_NAME , MODE_APPEND)
@@ -91,13 +91,13 @@ class CreateWorkoutFragment : Fragment() {
         }
 
     }
-    private fun SaveWorkout(v: View?) {
+    private fun SaveWorkout() {
         var text = WorkoutName.text.toString()
         FILE_NAME = text
 
     }
 
-    private fun load(v: View?) {
+    private fun load() {
         var fis: FileInputStream? = null
 
         try {

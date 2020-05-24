@@ -24,5 +24,9 @@
             android:id="@+id/nav_view_workout"
             android:icon="@drawable/ic_weights"
             android:title="View Workouts" />
+        <item
+            android:id="@+id/nav_view_run"
+            android:icon="@drawable/ic_directions_run_black_24dp"
+            android:title="Go on a run" />
     </group>
 </menu>

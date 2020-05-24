@@ -26,6 +26,8 @@ class NavDrawer : AppCompatActivity() {
     var currentUserName by Delegates.notNull<String>()
     var currentUserDbId by Delegates.notNull<Int>()
 
+    //built in navigation drawer activity
+
     override fun onCreate(savedInstanceState: Bundle?) {
         currentUserCurrency = intent.extras!!.getInt("currency")
         currentUserName = intent.extras!!.getString("username")!!
@@ -49,6 +51,13 @@ class NavDrawer : AppCompatActivity() {
         navView.menu.findItem(R.id.nav_Workout).setOnMenuItemClickListener {
             navView.setCheckedItem(R.id.nav_Workout)
             navController.navigate(R.id.nav_workout)
+            drawerLayout.closeDrawers()
+            true
+        }
+
+        navView.menu.findItem(R.id.nav_view_run).setOnMenuItemClickListener {
+            navView.setCheckedItem(R.id.nav_view_run)
+            navController.navigate(R.id.runFragment)
             drawerLayout.closeDrawers()
             true
         }

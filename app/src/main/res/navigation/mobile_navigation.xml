@@ -33,4 +33,9 @@
         android:name="com.example.fitness.ui.ViewWorkoutFragment"
         android:label="Workouts"
         tools:layout="@layout/fragment_view_workout"/>
+    <fragment
+        android:id="@+id/runFragment"
+        android:name="com.example.fitness.ui.RunFragment"
+        android:label="fragment_run"
+        tools:layout="@layout/fragment_run" />
 </navigation>
