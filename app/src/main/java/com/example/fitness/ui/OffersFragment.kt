@@ -33,7 +33,7 @@ class OffersFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?){
         super.onViewCreated(view, savedInstanceState)
 
-        currencyCounter2.text = "You currently have ${(activity as? NavDrawer)!!.currentUserCurrency} coins"
+        currencyCounter2.text = "coins: ${(activity as? NavDrawer)!!.currentUserCurrency}"
         nameView2.text = "Logged in as ${(activity as? NavDrawer)!!.currentUserName}"
 
         CharitySignUp1.setOnClickListener {

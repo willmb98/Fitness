@@ -30,7 +30,7 @@ class StoreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        currencyCounter.text = "Your coins: ${(activity as? NavDrawer)!!.currentUserCurrency}"
+        currencyCounter.text = "coins: ${(activity as? NavDrawer)!!.currentUserCurrency}"
         nameView5.text = "Logged in as ${(activity as? NavDrawer)!!.currentUserName}"
 
         val buttonList = mutableListOf<ImageButton>()
