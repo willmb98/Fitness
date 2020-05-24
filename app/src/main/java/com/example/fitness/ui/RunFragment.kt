@@ -5,7 +5,10 @@ import android.os.SystemClock
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.fitness.DatabaseMethods
+import com.example.fitness.NavDrawer
 import com.example.fitness.R
 import kotlinx.android.synthetic.main.fragment_run.*
 import kotlin.math.round
@@ -17,7 +20,7 @@ class RunFragment : Fragment() {
     private var pauseOffset: Long = 0
     private var distance:Double = 0.00
     private var secIntervals = 1
-    private var steps:Int = 0
+    private var steps = 0
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -50,19 +53,24 @@ class RunFragment : Fragment() {
         }
         pauseBtn.setOnClickListener {
             if (running) {
-                chronometer.stop();
-                pauseOffset = SystemClock.elapsedRealtime() - chronometer.getBase();
-                running = false;
+                chronometer.stop()
+                pauseOffset = SystemClock.elapsedRealtime() - chronometer.getBase()
+                running = false
             }
         }
         resetBtn.setOnClickListener {
-            chronometer.setBase(SystemClock.elapsedRealtime());
-            chronometer.stop();
-            running = false;
-            steps = 0;
-            distance = 0.0;
-            tvSteps.text = "Steps: ${steps}"
-            tvDistance.text = "Km run: ${distance.round(2)}"
+            chronometer.setBase(SystemClock.elapsedRealtime())
+            chronometer.stop()
+
+            val coinsToAdd = steps*10
+            (activity as NavDrawer).currentUserCurrency = (activity as NavDrawer).currentUserCurrency + coinsToAdd
+            DatabaseMethods.updateCoins((activity as NavDrawer).currentUserCurrency, (activity as NavDrawer).currentUserDbId)
+            Toast.makeText(activity, "you earnt $coinsToAdd coins for that run!", Toast.LENGTH_LONG).show()
+            (activity as NavDrawer).navController.navigate(R.id.nav_home)
+
+            running = false
+            steps = 0
+            distance = 0.0
         }
     }
 
