@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_Charity"
-        android:name="com.example.fitness.ui.CharityFragment"
+        android:name="com.example.fitness.ui.OffersFragment"
         android:label="@string/menu_charity"
         tools:layout="@layout/fragment_charity" />
 
@@ -33,4 +33,9 @@
         android:name="com.example.fitness.ui.ViewWorkoutFragment"
         android:label="Workouts"
         tools:layout="@layout/fragment_view_workout"/>
+    <fragment
+        android:id="@+id/runFragment"
+        android:name="com.example.fitness.ui.RunFragment"
+        android:label="fragment_run"
+        tools:layout="@layout/fragment_run" />
 </navigation>

@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import com.example.fitness.DatabaseMethods
 import com.example.fitness.NavDrawer
 import com.example.fitness.R
+import kotlinx.android.synthetic.main.fragment_main_page.*
 import kotlinx.android.synthetic.main.fragment_store.*
 import kotlinx.coroutines.newSingleThreadContext
 import kotlinx.coroutines.runBlocking
@@ -30,7 +31,7 @@ class StoreFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         currencyCounter.text = "coins: ${(activity as? NavDrawer)!!.currentUserCurrency}"
-        nameView.text = "logged in as: ${(activity as? NavDrawer)!!.currentUserName}"
+        nameView5.text = "Logged in as ${(activity as? NavDrawer)!!.currentUserName}"
 
         val buttonList = mutableListOf<ImageButton>()
         for (child in sequenceOf(leftLayout.children, rightLayout.children).flatten()) {
@@ -64,7 +65,7 @@ class StoreFragment : Fragment() {
                     }
 
                     builder.setNegativeButton("No"){dialog,which ->
-                        Toast.makeText(requireContext(), "purchase canceled", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), "purchase cancelled", Toast.LENGTH_SHORT).show()
                     }
                     builder.show()
                 } else {

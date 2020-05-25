@@ -5,20 +5,163 @@
     android:id="@+id/ContraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/home"
     tools:context=".NavDrawer">
+
+    <TextView
+        android:id="@+id/nameView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Logged in as: NAME"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="372dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="88dp"
+        android:gravity="center_horizontal"
+        android:text="Welcome to ProFitness"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/currencyCounter4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Coins: 0"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Logoutbtn"
-        android:layout_width="61dp"
-        android:layout_height="30dp"
+        android:layout_width="107dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Logout"
-        android:textSize="8sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
         tools:text="Logout" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Yesterday's Stats"
+                android:textStyle="bold|italic"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/nameView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14343 Steps"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/nameView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.1 kilometer walk"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/nameView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50 Situps"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/nameView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 mile run"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Today's Stats"
+                android:textStyle="bold|italic"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/nameView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7543 Steps"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/nameView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.8 kilometer walk"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/nameView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 Situps"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/nameView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 mile run"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

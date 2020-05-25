@@ -26,7 +26,7 @@ class CreateWorkoutFragment : Fragment() {
     private lateinit var WorkoutName: EditText
     private lateinit var mShowText: TextView
     private lateinit var Savebtn: Button
-
+    private lateinit var Loadbtn: Button
     private lateinit var SaveName: Button
     private var FILE_NAME: String = "Example1.txt"
 
@@ -39,34 +39,36 @@ class CreateWorkoutFragment : Fragment() {
 
 
         Savebtn = v.findViewById(R.id.savebtn)
-
+        Loadbtn = v.findViewById(R.id.loadbtn)
         SaveName = v.findViewById(R.id.savebtn2)
         Savebtn.setOnClickListener {
-        save(view)
+        save()
         }
-
+        Loadbtn.setOnClickListener {
+            load()
+        }
         SaveName.setOnClickListener {
-            SaveWorkout(view)
+            SaveWorkout()
         }
 
         mEditText = v.findViewById(R.id.edittxt)
         sets = v.findViewById(R.id.edittextsets)
         reps = v.findViewById(R.id.edittextreps)
+        mShowText = v.findViewById(R.id.textoutput)
         WorkoutName = v.findViewById(R.id.edtwrkouttxt)
         return v
 
-
-
-        //todo this
+        //TODO("Connect CreateWorkout to database, uploading the workout")
+        //TODO("Add Option (Potentially new page) to add daily steps")
 
     }
+
     private fun resetFile(v: View?){
         var file: File
     }
 
-
-    fun save(v: View?) {
-        val text: String = "\n "+ mEditText.text.toString() + "\n" + sets.text.toString() + "\n" + reps.text.toString()
+    private fun save() {
+        val text: String = mEditText.text.toString() + "\n" + sets.text.toString() + "\n" + reps.text.toString()
         var fos: FileOutputStream? = null
         try {
         fos = context?.openFileOutput(FILE_NAME , MODE_APPEND)
@@ -89,13 +91,13 @@ class CreateWorkoutFragment : Fragment() {
         }
 
     }
-    private fun SaveWorkout(v: View?) {
+    private fun SaveWorkout() {
         var text = WorkoutName.text.toString()
         FILE_NAME = text
 
     }
 
-    private fun load(v: View?) {
+    private fun load() {
         var fis: FileInputStream? = null
 
         try {

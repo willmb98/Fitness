@@ -3,42 +3,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/home">
 
     <TextView
-        android:id="@+id/nameView"
+        android:id="@+id/charitytxt8"
+        android:layout_width="411dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text="Exchange coins for rewards!"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameView5" />
+
+    <TextView
+        android:id="@+id/nameView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:text="Logged in as: NAME"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/currencyCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:text="Coins: 0"
-        app:layout_constraintEnd_toEndOf="@+id/nameView"
-        app:layout_constraintTop_toBottomOf="@+id/nameView" />
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currencyCounter">
+        app:layout_constraintTop_toBottomOf="@+id/charitytxt8">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,7 +90,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:paddingBottom="20dp"
-                    android:text="Freeze your Streak \n 50 coins" />
+                    android:text="Freeze your Streak \n 50 coins"
+                    android:textColor="#FFFFFF" />
 
                 <ImageButton
                     android:id="@+id/imageButton4"
@@ -83,7 +107,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:paddingBottom="20dp"
-                    android:text="30% off se ADIDAS shoes! \n 200 coins" />
+                    android:text="30% off se ADIDAS shoes! \n 200 coins"
+                    android:textColor="#FFFFFF" />
 
                 <ImageButton
                     android:id="@+id/imageButton6"
@@ -99,7 +124,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:paddingBottom="20dp"
-                    android:text="buy at NIKE for free bottle\n200 coins" />
+                    android:text="buy at NIKE for free bottle\n200 coins"
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
 
             <LinearLayout
@@ -124,7 +150,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:paddingBottom="20dp"
-                    android:text="Unlock New Exersizes \n100 coins" />
+                    android:text="Unlock New Exersizes \n100 coins"
+                    android:textColor="#FFFFFF" />
 
                 <ImageButton
                     android:id="@+id/imageButton5"
@@ -140,7 +167,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:paddingBottom="20dp"
-                    android:text="£10 SPOTS DIRECT credit!\n200 coins" />
+                    android:text="£10 SPOTS DIRECT credit!\n200 coins"
+                    android:textColor="#FFFFFF" />
 
                 <ImageButton
                     android:id="@+id/imageButton3"
@@ -156,7 +184,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:paddingBottom="20dp"
-                    android:text="20% off PUMA shits\n 200 coins" />
+                    android:text="20% off PUMA shits\n 200 coins"
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

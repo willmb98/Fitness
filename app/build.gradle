@@ -8,6 +8,7 @@ android {
     android.defaultConfig.vectorDrawables.useSupportLibrary = true
 
     defaultConfig {
+        vectorDrawables.useSupportLibrary = true
         applicationId "com.example.fitness"
         minSdkVersion 16
         targetSdkVersion 29
@@ -66,4 +67,5 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3'
     implementation 'org.jsoup:jsoup:1.13.1'
+    implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
 }
