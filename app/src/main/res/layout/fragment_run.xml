@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/home"
-    tools:context="com.codinginflow.chronometerexample.MainActivity">
+    android:background="@drawable/home">
 
     <TextView
         android:id="@+id/tvDistance"
@@ -37,26 +36,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="120dp">
 
         <LinearLayout
+            android:id="@+id/left_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="40dp">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/play_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="90dp"
-                android:layout_marginLeft="32dp"
-                app:srcCompat="@drawable/ic_play" />
+               app:srcCompat="@drawable/ic_play" />
         </LinearLayout>
 
-
         <LinearLayout
+            android:id="@+id/centre_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -67,27 +67,23 @@
                 android:id="@+id/pause_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="90dp"
                 app:srcCompat="@drawable/ic_pause" />
-
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/right_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingRight="40dp">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/stop_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="90dp"
-                android:layout_marginRight="32dp"
                 app:srcCompat="@drawable/ic_stop" />
         </LinearLayout>
     </LinearLayout>
-
-
 </LinearLayout>

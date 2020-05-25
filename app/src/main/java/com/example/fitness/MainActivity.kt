@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.InputType
 import android.util.Log
 import android.view.View
+import android.widget.EditText
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.newSingleThreadContext
@@ -32,21 +33,31 @@ class MainActivity : AppCompatActivity() {
             tvTrys.visibility = View.GONE
 
             btnRegister.setOnClickListener {
-                runBlocking (newSingleThreadContext("NetworkThread")) {
-                    DatabaseMethods.register(
-                        etName.text.toString(),
-                        etPassword.text.toString(),
-                        etEmail.text.toString(),
-                        etFirstName.text.toString(),
-                        etLastName.text.toString()
-                    )
+                val editextList = listOf<EditText>(etName, etPassword, etFirstName, etLastName, etEmail)
+
+                if (editextList.all { it.text.toString().trim().isNotEmpty() }) {
+                    runBlocking (newSingleThreadContext("NetworkThread")) {
+                        DatabaseMethods.register(
+                            etName.text.toString(),
+                            etPassword.text.toString(),
+                            etEmail.text.toString(),
+                            etFirstName.text.toString(),
+                            etLastName.text.toString()
+                        )
+                    }
+                    Toast.makeText(
+                        applicationContext,
+                        "registration successful, logging in now...",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    validate(etName.text.toString(), etPassword.text.toString())
+                } else {
+                    Toast.makeText(
+                        applicationContext,
+                        "you have empty fields",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
-                Toast.makeText(
-                    applicationContext,
-                    "registration successful, logging in now...",
-                    Toast.LENGTH_SHORT
-                ).show()
-                validate(etName.text.toString(), etPassword.text.toString())
             }
         }
     }
@@ -62,6 +73,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("username", dbResults.getString("username"))
             intent.putExtra("currency", dbResults.getString("total_currency").toInt())
             startActivity(intent)
+            this.finish()
         } else {
 
             counter--

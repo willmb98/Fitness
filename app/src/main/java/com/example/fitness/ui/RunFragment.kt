@@ -20,12 +20,14 @@ class RunFragment : Fragment() {
 
     private var running = false
     private var pauseOffset: Long = 0
-    private var distance:Double = 0.00
+    private var distance: Double = 0.00
     private var secIntervals = 1
     private var steps = 0
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_run, container, false)
     }
 
@@ -39,10 +41,11 @@ class RunFragment : Fragment() {
             //every 1 second add more to the simulated run
             if (SystemClock.elapsedRealtime() - chronometer.base >= (1000 * secIntervals)) {
                 secIntervals++
-                distance += 0.002
+                distance += 0.02
+                distance = distance.round(2)
                 steps += 2
                 tvSteps.text = "Steps: ${steps}"
-                tvDistance.text = "Km run: ${distance.round(2)}"
+                tvDistance.text = "Km run: ${distance}"
             }
         }
 
@@ -60,22 +63,37 @@ class RunFragment : Fragment() {
                 running = false
             }
         }
+
         stop_button.setOnClickListener {
-            chronometer.setBase(SystemClock.elapsedRealtime())
-            chronometer.stop()
 
-            val coinsToAdd = steps*10
-            (activity as NavDrawer).currentUserCurrency = (activity as NavDrawer).currentUserCurrency + coinsToAdd
-            runBlocking (newSingleThreadContext("NetworkThread")) {
-                DatabaseMethods.updateCoins((activity as NavDrawer).currentUserCurrency, (activity as NavDrawer).currentUserDbId)
+            stop_button.setOnClickListener {
+
+                chronometer.setBase(SystemClock.elapsedRealtime())
+                chronometer.stop()
+
+                val coinsToAdd = steps * 10
+                (activity as NavDrawer).currentUserCurrency =
+                    (activity as NavDrawer).currentUserCurrency + coinsToAdd
+                runBlocking(newSingleThreadContext("NetworkThread")) {
+                    DatabaseMethods.updateCoins(
+                        (activity as NavDrawer).currentUserCurrency,
+                        (activity as NavDrawer).currentUserDbId
+                    )
+                }
+                Toast.makeText(
+                    activity,
+                    "you earnt $coinsToAdd coins for that run!",
+                    Toast.LENGTH_LONG
+                ).show()
+                (activity as NavDrawer).navController.navigate(R.id.nav_home)
+
+                running = false
+                steps = 0
+                distance = 0.0
             }
-            Toast.makeText(activity, "you earnt $coinsToAdd coins for that run!", Toast.LENGTH_LONG).show()
-            (activity as NavDrawer).navController.navigate(R.id.nav_home)
-
-            running = false
-            steps = 0
-            distance = 0.0
         }
+
+
     }
 
     fun Double.round(decimals: Int): Double {

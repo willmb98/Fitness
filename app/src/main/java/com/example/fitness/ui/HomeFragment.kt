@@ -32,6 +32,7 @@ class HomeFragment : Fragment() {
         logout.setOnClickListener {
             val intent = Intent(context, MainActivity::class.java)
             startActivity(intent)
+            requireActivity().finish()
         }
     }
 }
