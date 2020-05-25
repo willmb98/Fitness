@@ -26,7 +26,7 @@ class CreateWorkoutFragment : Fragment() {
     private lateinit var WorkoutName: EditText
     private lateinit var mShowText: TextView
     private lateinit var Savebtn: Button
-    private lateinit var Loadbtn: Button
+
     private lateinit var SaveName: Button
     private var FILE_NAME: String = "Example1.txt"
 
@@ -39,14 +39,12 @@ class CreateWorkoutFragment : Fragment() {
 
 
         Savebtn = v.findViewById(R.id.savebtn)
-        Loadbtn = v.findViewById(R.id.loadbtn)
+
         SaveName = v.findViewById(R.id.savebtn2)
         Savebtn.setOnClickListener {
         save(view)
         }
-        Loadbtn.setOnClickListener {
-            load(view)
-        }
+
         SaveName.setOnClickListener {
             SaveWorkout(view)
         }
@@ -54,7 +52,6 @@ class CreateWorkoutFragment : Fragment() {
         mEditText = v.findViewById(R.id.edittxt)
         sets = v.findViewById(R.id.edittextsets)
         reps = v.findViewById(R.id.edittextreps)
-        mShowText = v.findViewById(R.id.textoutput)
         WorkoutName = v.findViewById(R.id.edtwrkouttxt)
         return v
 

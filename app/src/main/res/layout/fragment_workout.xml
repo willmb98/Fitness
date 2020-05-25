@@ -28,9 +28,12 @@
             android:layout_marginTop="52dp"
 
             android:text="Save"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edittextreps" />
+            app:layout_constraintTop_toBottomOf="@+id/edittextreps"
+            app:layout_constraintVertical_bias="0.364" />
 
         <Button
             android:id="@+id/savebtn2"
@@ -44,31 +47,6 @@
             app:layout_constraintStart_toEndOf="@+id/edtwrkouttxt"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.046" />
-
-        <Button
-            android:id="@+id/loadbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-
-            android:text="Load"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/savebtn" />
-
-        <EditText
-            android:id="@+id/textoutput"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loadbtn"
-            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView8"
