@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/home">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,6 +17,7 @@
             android:layout_marginTop="32dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.515"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +66,7 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
+            android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -76,6 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="124dp"
             android:text="Exercise"
+            android:textColor="#FFFFFF"
             app:layout_constraintEnd_toStartOf="@+id/edittxt"
             app:layout_constraintHorizontal_bias="0.591"
             app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +94,7 @@
             android:layout_marginRight="96dp"
             android:ems="10"
             android:inputType="number"
+            android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edittxt" />
 
@@ -102,6 +107,7 @@
             android:layout_marginRight="96dp"
             android:ems="10"
             android:inputType="number"
+            android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edittextsets" />
 
@@ -113,6 +119,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:text="Sets"
+            android:textColor="#FFFFFF"
             app:layout_constraintEnd_toStartOf="@+id/edittextsets"
             app:layout_constraintHorizontal_bias="0.64"
             app:layout_constraintStart_toStartOf="parent"
@@ -126,6 +133,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:text="Reps"
+            android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/edittextreps"
             app:layout_constraintHorizontal_bias="0.58"
@@ -141,6 +149,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Workout Name..."
+            android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

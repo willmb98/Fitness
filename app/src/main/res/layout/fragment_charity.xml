@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/home">
 
     <TextView
         android:id="@+id/currencyCounter2"
@@ -13,6 +14,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="Coins: 0"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,6 +26,7 @@
         android:layout_marginLeft="17dp"
         android:layout_marginTop="16dp"
         android:text="Logged in as: NAME"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,6 +43,7 @@
         android:text="Special offers to gain coins"
         android:textSize="24sp"
         android:textStyle="bold|italic"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +86,8 @@
                     android:layout_height="30dp"
                     android:gravity="center_horizontal"
                     android:text="Watch an advert for 5 coins"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"/>
 
                 <ImageView
                     android:id="@+id/CharitySignUp3"
@@ -96,7 +101,8 @@
                     android:layout_height="30dp"
                     android:gravity="center_horizontal"
                     android:text="Make a purchase through partner site for 50 coins"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF" />
 
                 <ImageView
                     android:id="@+id/CharitySignUp5"
@@ -110,7 +116,8 @@
                     android:layout_height="30dp"
                     android:gravity="center_horizontal"
                     android:text="Sign up to partner subscription for 150 coins"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF" />
 
             </LinearLayout>
 
@@ -133,7 +140,8 @@
                     android:layout_height="30dp"
                     android:gravity="center_horizontal"
                     android:text="Sign up at partner site for 50 coins"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF" />
 
                 <ImageView
                     android:id="@+id/CharitySignUp4"
@@ -147,7 +155,8 @@
                     android:layout_height="30dp"
                     android:gravity="center_horizontal"
                     android:text="Make a purchase through different site for 100 coins"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF" />
 
                 <ImageView
                     android:id="@+id/CharitySignUp6"
@@ -161,7 +170,8 @@
                     android:layout_height="30dp"
                     android:gravity="center_horizontal"
                     android:text="Sign up to this partner subscription for 300 coins"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

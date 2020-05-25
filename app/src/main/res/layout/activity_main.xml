@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8DC0E8"
+    android:background="@drawable/home"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -29,6 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:textColor="#FFFFFF"
             android:hint="Username"
             android:inputType="textPersonName" />
 
@@ -37,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
+            android:textColor="#FFFFFF"
             android:hint="Password"
             android:inputType="textPassword" />
 
@@ -99,6 +101,7 @@
             android:id="@+id/tvTrys"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
             android:text="Attempts remaining: 5" />
     </LinearLayout>
 
@@ -107,8 +110,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ProFitness"
-        android:textColor="#000000"
-        android:textSize="36sp"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"

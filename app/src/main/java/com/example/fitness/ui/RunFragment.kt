@@ -46,21 +46,21 @@ class RunFragment : Fragment() {
             }
         }
 
-        startBtn.setOnClickListener {
+        play_button.setOnClickListener {
             if (!running) {
                 chronometer.base = (SystemClock.elapsedRealtime() - pauseOffset);
                 chronometer.start();
                 running = true;
             }
         }
-        pauseBtn.setOnClickListener {
+        pause_button.setOnClickListener {
             if (running) {
                 chronometer.stop()
                 pauseOffset = SystemClock.elapsedRealtime() - chronometer.getBase()
                 running = false
             }
         }
-        resetBtn.setOnClickListener {
+        stop_button.setOnClickListener {
             chronometer.setBase(SystemClock.elapsedRealtime())
             chronometer.stop()
 
