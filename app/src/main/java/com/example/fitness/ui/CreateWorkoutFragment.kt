@@ -1,7 +1,6 @@
 package com.example.fitness.ui
 
 import android.content.Context.MODE_APPEND
-import android.content.Context.MODE_PRIVATE
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,10 +11,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.fitness.R
-import org.w3c.dom.Text
+import kotlinx.android.synthetic.main.fragment_view_workout.*
+import kotlinx.android.synthetic.main.fragment_workout.*
 import java.io.*
-import java.lang.StringBuilder
-import java.nio.file.Files.*
 
 
 class CreateWorkoutFragment : Fragment() {
@@ -35,32 +33,34 @@ class CreateWorkoutFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        var v = inflater.inflate(R.layout.fragment_workout, container, false)
+         return inflater.inflate(R.layout.fragment_workout, container, false)
 
 
-        Savebtn = v.findViewById(R.id.savebtn)
-        Loadbtn = v.findViewById(R.id.loadbtn)
-        SaveName = v.findViewById(R.id.savebtn2)
+
+
+
+
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        Savebtn = savebtn
+
+        SaveName = savebtn2
         Savebtn.setOnClickListener {
-        save()
+            save()
         }
-        Loadbtn.setOnClickListener {
-            load()
-        }
+
         SaveName.setOnClickListener {
             SaveWorkout()
         }
 
-        mEditText = v.findViewById(R.id.edittxt)
-        sets = v.findViewById(R.id.edittextsets)
-        reps = v.findViewById(R.id.edittextreps)
-        mShowText = v.findViewById(R.id.textoutput)
-        WorkoutName = v.findViewById(R.id.edtwrkouttxt)
-        return v
-
-        //TODO("Connect CreateWorkout to database, uploading the workout")
-        //TODO("Add Option (Potentially new page) to add daily steps")
-
+        mEditText = edittxt
+        sets = edittextsets
+        reps = edittextreps
+        WorkoutName = edtwrkouttxt
     }
 
     private fun resetFile(v: View?){
